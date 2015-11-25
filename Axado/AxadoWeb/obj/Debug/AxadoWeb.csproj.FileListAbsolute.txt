@@ -1,0 +1,5 @@
+F:\AxadoTest\Axado\AxadoWeb\bin\AxadoWeb.dll
+F:\AxadoTest\Axado\AxadoWeb\bin\AxadoWeb.pdb
+F:\AxadoTest\Axado\AxadoWeb\obj\Debug\AxadoWeb.dll
+F:\AxadoTest\Axado\AxadoWeb\obj\Debug\AxadoWeb.pdb
+F:\AxadoTest\Axado\AxadoWeb\obj\Debug\AxadoWeb.csprojResolveAssemblyReference.cache
