@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{0E719693-A193-4341-810D-AADA28DF1D32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{E41B9EF5-21E2-407C-8414-3B36EF6FCD99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{60BE62DD-9D53-40E8-A2B8-79FE8A344575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{0E719693-A193-4341-810D-AADA28DF1D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E719693-A193-4341-810D-AADA28DF1D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E719693-A193-4341-810D-AADA28DF1D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41B9EF5-21E2-407C-8414-3B36EF6FCD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41B9EF5-21E2-407C-8414-3B36EF6FCD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41B9EF5-21E2-407C-8414-3B36EF6FCD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41B9EF5-21E2-407C-8414-3B36EF6FCD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60BE62DD-9D53-40E8-A2B8-79FE8A344575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BE62DD-9D53-40E8-A2B8-79FE8A344575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BE62DD-9D53-40E8-A2B8-79FE8A344575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BE62DD-9D53-40E8-A2B8-79FE8A344575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
