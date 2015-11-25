@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DataAccess
+namespace Axado.DataAccess
 {
     /*######
      * Programa:Implementación de la Interface de conexión al Base de Datos

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DataAccess
+namespace Axado.DataAccess
 {
     /*######
     * Programa:Interface DAO PARA CRUD de entidades en Banco de Datos
