@@ -22,22 +22,22 @@ namespace Axado.DAO
             using (SqlCommand cmd = _conexion.Get().CreateCommand())
             {
                 string query = "INSERT INTO carriers ";
-                query += "(tipo,nome,endereco,cidade,estado,cpf,cnpj,inscr_estadual,nro_placa,estado_placa,id_classificacao) ";
-                query += "VALUES(@tipo,@nome,@endereco,@cidade,@estado,@cpf,@cnpj,@inscr_estadual,@nro_placa,@estado_placa,@id_classificacao) ";
-
+                query += "(tipo, nome, endereco, cidade, estado, cpf, cnpj, inscr_estadual, nro_placa, estado_placa, id_classificacao) ";
+                query += "VALUES(@tipo, @nome, @endereco, @cidade, @estado, @cpf, @cnpj, @inscr_estadual, @nro_placa, @estado_placa, @id_classificacao) ";
+                query += "; SELECT CAST(scope_identity() AS int)";
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
-                cmd.Parameters.Add("@tipo", SqlDbType.VarChar).Value = model.tipo;
-                cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = model.nome;
-                cmd.Parameters.Add("@endereco", SqlDbType.VarChar).Value = model.endereco;
-                cmd.Parameters.Add("@cidade", SqlDbType.VarChar).Value = model.cidade;
-                cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = model.estado;
-                cmd.Parameters.Add("@cpf", SqlDbType.VarChar).Value = model.cpf;
-                cmd.Parameters.Add("@cnpj", SqlDbType.VarChar).Value = model.cnpj;
-                cmd.Parameters.Add("@inscr_estadual", SqlDbType.VarChar).Value = model.inscr_estadual;
-                cmd.Parameters.Add("@nro_placa", SqlDbType.VarChar).Value = model.nro_placa;
-                cmd.Parameters.Add("@estado_placa", SqlDbType.VarChar).Value = model.estado_placa;
-                cmd.Parameters.Add("@id_classificacao", SqlDbType.Int).Value = model.id_classificacao;
+                cmd.Parameters.AddWithValue("@tipo", model.tipo);
+                cmd.Parameters.AddWithValue("@nome", model.nome);
+                cmd.Parameters.AddWithValue("@endereco", model.endereco);
+                cmd.Parameters.AddWithValue("@cidade", model.cidade);
+                cmd.Parameters.AddWithValue("@estado", model.estado);
+                cmd.Parameters.AddWithValue("@cpf", model.cpf);
+                cmd.Parameters.AddWithValue("@cnpj", model.cnpj);
+                cmd.Parameters.AddWithValue("@inscr_estadual", model.inscr_estadual);
+                cmd.Parameters.AddWithValue("@nro_placa", model.nro_placa);
+                cmd.Parameters.AddWithValue("@estado_placa", model.estado_placa);
+                cmd.Parameters.AddWithValue("@id_classificacao", model.id_classificacao);
 
                 model.id_carrier = int.Parse(cmd.ExecuteScalar().ToString());
             }
@@ -56,18 +56,18 @@ namespace Axado.DAO
 
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
-                cmd.Parameters.Add("@id_carrier", SqlDbType.Int).Value = model.id_carrier;
-                cmd.Parameters.Add("@tipo", SqlDbType.VarChar).Value = model.tipo;
-                cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = model.nome;
-                cmd.Parameters.Add("@endereco", SqlDbType.VarChar).Value = model.endereco;
-                cmd.Parameters.Add("@cidade", SqlDbType.VarChar).Value = model.cidade;
-                cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = model.estado;
-                cmd.Parameters.Add("@cpf", SqlDbType.VarChar).Value = model.cpf;
-                cmd.Parameters.Add("@cnpj", SqlDbType.VarChar).Value = model.cnpj;
-                cmd.Parameters.Add("@inscr_estadual", SqlDbType.VarChar).Value = model.inscr_estadual;
-                cmd.Parameters.Add("@nro_placa", SqlDbType.VarChar).Value = model.nro_placa;
-                cmd.Parameters.Add("@estado_placa", SqlDbType.VarChar).Value = model.estado_placa;
-                cmd.Parameters.Add("@id_classificacao", SqlDbType.Int).Value = model.id_classificacao;
+                cmd.Parameters.AddWithValue("@id_carrier", model.id_carrier);
+                cmd.Parameters.AddWithValue("@tipo", model.tipo);
+                cmd.Parameters.AddWithValue("@nome", model.nome);
+                cmd.Parameters.AddWithValue("@endereco", model.endereco);
+                cmd.Parameters.AddWithValue("@cidade", model.cidade);
+                cmd.Parameters.AddWithValue("@estado", model.estado);
+                cmd.Parameters.AddWithValue("@cpf", model.cpf);
+                cmd.Parameters.AddWithValue("@cnpj", model.cnpj);
+                cmd.Parameters.AddWithValue("@inscr_estadual", model.inscr_estadual);
+                cmd.Parameters.AddWithValue("@nro_placa", model.nro_placa);
+                cmd.Parameters.AddWithValue("@estado_placa", model.estado_placa);
+                cmd.Parameters.AddWithValue("@id_classificacao", model.id_classificacao);
                 
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -87,7 +87,7 @@ namespace Axado.DAO
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
 
-                cmd.Parameters.Add("@id_carrier", SqlDbType.Int).Value = model.id_carrier;
+                cmd.Parameters.AddWithValue("@id_carrier", model.id_carrier);
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {
@@ -109,7 +109,8 @@ namespace Axado.DAO
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = query;
 
-                cmd.Parameters.Add("@id_carrier", SqlDbType.Int).Value = keys[0];
+                cmd.Parameters.AddWithValue("@id_carrier", keys[0]);
+                //cmd.Parameters.Add("@id_carrier", SqlDbType.Int).Value = keys[0];
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {

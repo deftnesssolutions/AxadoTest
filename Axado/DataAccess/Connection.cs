@@ -23,7 +23,7 @@ namespace Axado.DataAccess
         //Constructor
         public Connection()
         {
-            _connectionString = new SqlConnection("User Id=postgres;Password=postgres;Host=localhost;Database=axadotest");
+            _connectionString = new SqlConnection("Data Source=localhost;Initial Catalog=axadotest;Integrated Security=True");
         }
         #endregion
 

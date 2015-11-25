@@ -1,0 +1,4 @@
+F:\AxadoTest\Axado\DataAccess\bin\Debug\DataAccess.dll
+F:\AxadoTest\Axado\DataAccess\bin\Debug\DataAccess.pdb
+F:\AxadoTest\Axado\DataAccess\obj\Debug\DataAccess.dll
+F:\AxadoTest\Axado\DataAccess\obj\Debug\DataAccess.pdb

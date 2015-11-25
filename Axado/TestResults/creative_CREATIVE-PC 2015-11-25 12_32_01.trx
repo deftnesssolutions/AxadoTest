@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="17450c18-6279-401e-95ee-323c5d405349" name="creative@CREATIVE-PC 2015-11-25 12:32:01" runUser="creative-PC\creative" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="59f0ee62-8ca7-4246-b3db-fd4d06d78222">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="F:\AxadoTest\Axado\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="creative_CREATIVE-PC 2015-11-25 12_32_01">
+      <DeploymentItem filename="F:\AxadoTest\Axado\DAO\bin\Debug\DAO.dll" />
+      <DeploymentItem filename="F:\AxadoTest\Axado\DataAccess\bin\Debug\DataAccess.dll" />
+      <DeploymentItem filename="F:\AxadoTest\Axado\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-11-25T12:32:01.2436685-02:00" queuing="2015-11-25T12:32:02.2507261-02:00" start="2015-11-25T12:32:02.4757390-02:00" finish="2015-11-25T12:32:50.3134752-02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="CREATIVE-PC" outcome="Error" timestamp="2015-11-25T12:32:50.3134752-02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="crudTest" storage="f:\axadotest\axado\testunit\bin\debug\testunit.dll" id="e1279476-3810-d8ea-df6c-a80b39f3132c">
+      <Execution id="e6292a14-8d13-42a6-8834-b2fa784d9e62" />
+      <TestMethod codeBase="F:/AxadoTest/Axado/TestUnit/bin/Debug/TestUnit.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Axado.TestUnit.ClassificacaoCarrierDAOTest, TestUnit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="crudTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e1279476-3810-d8ea-df6c-a80b39f3132c" executionId="e6292a14-8d13-42a6-8834-b2fa784d9e62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e6292a14-8d13-42a6-8834-b2fa784d9e62" testId="e1279476-3810-d8ea-df6c-a80b39f3132c" testName="crudTest" computerName="CREATIVE-PC" duration="00:00:47.6337245" startTime="2015-11-25T12:32:02.6797507-02:00" endTime="2015-11-25T12:32:50.3134752-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6292a14-8d13-42a6-8834-b2fa784d9e62">
+    </UnitTestResult>
+  </Results>
+</TestRun>

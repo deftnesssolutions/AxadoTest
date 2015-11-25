@@ -1,0 +1,9 @@
+F:\AxadoTest\Axado\DAO\bin\Debug\DAO.dll
+F:\AxadoTest\Axado\DAO\bin\Debug\DAO.pdb
+F:\AxadoTest\Axado\DAO\bin\Debug\DataAccess.dll
+F:\AxadoTest\Axado\DAO\bin\Debug\Entities.dll
+F:\AxadoTest\Axado\DAO\bin\Debug\DataAccess.pdb
+F:\AxadoTest\Axado\DAO\bin\Debug\Entities.pdb
+F:\AxadoTest\Axado\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+F:\AxadoTest\Axado\DAO\obj\Debug\DAO.dll
+F:\AxadoTest\Axado\DAO\obj\Debug\DAO.pdb

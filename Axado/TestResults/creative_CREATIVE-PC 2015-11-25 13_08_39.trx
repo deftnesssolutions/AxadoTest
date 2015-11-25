@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="20d434d6-8ff0-41e0-a440-0ca5d7dc9cec" name="creative@CREATIVE-PC 2015-11-25 13:08:39" runUser="creative-PC\creative" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="59f0ee62-8ca7-4246-b3db-fd4d06d78222">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="creative_CREATIVE-PC 2015-11-25 13_08_39">
+      <DeploymentItem filename="F:\AxadoTest\Axado\DAO\bin\Debug\DAO.dll" />
+      <DeploymentItem filename="F:\AxadoTest\Axado\DataAccess\bin\Debug\DataAccess.dll" />
+      <DeploymentItem filename="F:\AxadoTest\Axado\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-11-25T13:08:39.1311054-02:00" queuing="2015-11-25T13:08:39.6151331-02:00" start="2015-11-25T13:08:39.6521352-02:00" finish="2015-11-25T13:08:40.3221736-02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="crudTest" storage="f:\axadotest\axado\testunit\bin\debug\testunit.dll" id="e1279476-3810-d8ea-df6c-a80b39f3132c">
+      <Execution id="b719cd41-ce06-440a-bd58-e00f37d7dcaa" />
+      <TestMethod codeBase="F:/AxadoTest/Axado/TestUnit/bin/Debug/TestUnit.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Axado.TestUnit.ClassificacaoCarrierDAOTest, TestUnit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="crudTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e1279476-3810-d8ea-df6c-a80b39f3132c" executionId="b719cd41-ce06-440a-bd58-e00f37d7dcaa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b719cd41-ce06-440a-bd58-e00f37d7dcaa" testId="e1279476-3810-d8ea-df6c-a80b39f3132c" testName="crudTest" computerName="CREATIVE-PC" duration="00:00:00.3697000" startTime="2015-11-25T13:08:39.7011380-02:00" endTime="2015-11-25T13:08:40.2841714-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b719cd41-ce06-440a-bd58-e00f37d7dcaa">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Axado.TestUnit.ClassificacaoCarrierDAOTest.crudTest threw exception: 
+System.Data.SqlClient.SqlException: Nome de coluna 'id_classificacao' inválido.
+Nome de coluna 'id_classificacao' inválido.
+Nome de coluna 'tipo' inválido.
+Nome de coluna 'descricaoFROM' inválido.</Message>
+          <StackTrace>    em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader()
+   em Axado.DAO.ClassificacaoCarrierDAO.FindOrDefault(Object[] keys) na F:\AxadoTest\Axado\DAO\ClassificacaoCarrierDAO.cs:linha 97
+   em Axado.TestUnit.ClassificacaoCarrierDAOTest.updateTest() na F:\AxadoTest\Axado\TestUnit\ClassificacaoCarrierDAOTest.cs:linha 46
+   em Axado.TestUnit.ClassificacaoCarrierDAOTest.crudTest() na F:\AxadoTest\Axado\TestUnit\ClassificacaoCarrierDAOTest.cs:linha 19
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

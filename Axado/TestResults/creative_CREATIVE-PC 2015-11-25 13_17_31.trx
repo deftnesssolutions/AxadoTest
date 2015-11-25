@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="aae5b11f-e899-4b58-8b2d-c01e470d826e" name="creative@CREATIVE-PC 2015-11-25 13:17:31" runUser="creative-PC\creative" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="59f0ee62-8ca7-4246-b3db-fd4d06d78222">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="creative_CREATIVE-PC 2015-11-25 13_17_31">
+      <DeploymentItem filename="F:\AxadoTest\Axado\DAO\bin\Debug\DAO.dll" />
+      <DeploymentItem filename="F:\AxadoTest\Axado\DataAccess\bin\Debug\DataAccess.dll" />
+      <DeploymentItem filename="F:\AxadoTest\Axado\Entities\bin\Debug\Entities.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-11-25T13:17:31.4315513-02:00" queuing="2015-11-25T13:17:31.4965550-02:00" start="2015-11-25T13:17:31.5015553-02:00" finish="2015-11-25T13:17:31.7215679-02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="crudTest" storage="f:\axadotest\axado\testunit\bin\debug\testunit.dll" id="dfe98009-b603-4977-fc9e-78b15a119541">
+      <Execution id="818463ec-f5fa-4729-a2a3-24892350bfac" />
+      <TestMethod codeBase="F:/AxadoTest/Axado/TestUnit/bin/Debug/TestUnit.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Axado.TestUnit.CarriersDAOTest, TestUnit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="crudTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="dfe98009-b603-4977-fc9e-78b15a119541" executionId="818463ec-f5fa-4729-a2a3-24892350bfac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="818463ec-f5fa-4729-a2a3-24892350bfac" testId="dfe98009-b603-4977-fc9e-78b15a119541" testName="crudTest" computerName="CREATIVE-PC" duration="00:00:00.0398368" startTime="2015-11-25T13:17:31.5075556-02:00" endTime="2015-11-25T13:17:31.7085671-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="818463ec-f5fa-4729-a2a3-24892350bfac">
+    </UnitTestResult>
+  </Results>
+</TestRun>
