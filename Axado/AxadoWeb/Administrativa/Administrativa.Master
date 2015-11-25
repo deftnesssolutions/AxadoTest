@@ -5,15 +5,104 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="Stylesheet" type="text/css" media="screen" href="../Styles/style.css" />
+    <script type="text/javascript">
+        function alteraMenu() {
+            if (typeof linkMenu != 'undefined') {
+                if (linkMenu == "principal")
+                    document.getElementById("adicionarAnuncio").className = "page_item current_page_item";
+                if (linkMenu == "carriers")
+                    document.getElementById("adicionarAnuncio").className = "page_item current_page_item";
+                if (linkMenu == "classificacao")
+                    document.getElementById("adicionarAnuncio").className = "page_item current_page_item";
+                if (linkMenu == "meusDados")
+                    document.getElementById("meusDados").className = "page_item current_page_item";
+            }
+        }
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body onload="alteraMenu()">
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+     <div style="background-color: #006cac; position: absolute; height: 110px; width: 100%;">
+    </div>
+    <div class="conteudoHeader">
+        <div id="login">
+             <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+           <%-- <AnonymousTemplate>
+            Bem Vindo, visitante! [
+                <asp:HyperLink ID="HyperLink5" NavigateUrl="~/Cadastro.aspx" runat="server">Cadastre-se</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLink6"  NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink> ]
+            </AnonymousTemplate>--%>
+            <LoggedInTemplate>
+            Bem Vindo <b><asp:LoginName ID="LoginName1" runat="server" /></b>! [
+                <asp:LoginStatus ID="LoginStatus1" LoginText="Log Out" LogoutAction="Redirect" LogoutPageUrl="~/" runat="server" />
+                ]
+            </LoggedInTemplate>
+            </asp:LoginView>
+        </div>
+        <div id="logo">
+            <asp:HyperLink ID="HyperLink4" NavigateUrl="~/" ImageUrl="~/images/go.png" runat="server">HyperLink</asp:HyperLink>
+        </div>
+        <div style="position: absolute; top: 67px; right: -143px;">
+            <div class="header_menu">
+                <div class="header_menu_res">
+                    <ul id="nav">
+                        <li id="principal">
+                            <asp:HyperLink ID="HyperLink2"  NavigateUrl="~/Administrativa/Principal.aspx" runat="server">Pagina Principal</asp:HyperLink></li>
+                        
+                        <li><a class="parent">Cadastros</a>
+                            <ul>
+                                <li id="carriers">
+                                <asp:HyperLink ID="HyperLink1"  NavigateUrl="~/Administrativa/CadastrarCarriers.aspx" runat="server">Cadastrar Transportadora</asp:HyperLink></li>
+                                <li id="classificacao">
+                                <asp:HyperLink ID="HyperLink5"  NavigateUrl="~/Administrativa/CadastrarClassificacaoCarrier.aspx" runat="server">Classificação de Transportadora</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li id="meusDados">
+                            <asp:HyperLink ID="HyperLink3"  NavigateUrl="~/Administrativa/MeusDados.aspx" runat="server">Meus Dados</asp:HyperLink></li>
+                    </ul>
+                    <div class="clr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <div id="footer">
+        <div class="conteudoFooter">
+            <ul class="contacts">
+                <h3>
+                    Contate-nos</h3>
+                <li><span>Email</span><p>
+                    : contato@tudoanuncios.com.br</p>
+                </li>
+                <li><span>Endereço</span><p>
+                    : 189 Av. Iraí, Centro - 54.789-906</p>
+                </li>
+                <li><span>Telefone</span><p>
+                    : 117-6837-9187</p>
+                </li>
+            </ul>
+            <ul id="connect">
+                <h3>
+                    Encontre-nos</h3>
+                <li>
+                    <asp:Image ID="Image2" ImageUrl="~/images/Facebook_icon.png" runat="server" /></li>
+                <li>
+                    <asp:Image ID="Image3" ImageUrl="~/images/Twitter_icon.png" runat="server" /></li>
+            </ul>
+            <div id="newsletter">
+                <p>
+                    <b>Inscreva-se e receba nossas novidades</b>
+                </p>
+                Nome:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> Email:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox><asp:Button
+                    ID="Button1" runat="server" Text="Inscrever-se" />
+            </div>
+            <span class="footnote">&copy; Copyright &copy; 2011. Todos os direitos reservados</span>
+        </div>
     </div>
     </form>
 </body>

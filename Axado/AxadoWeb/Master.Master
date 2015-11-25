@@ -4,10 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <link rel="Stylesheet" type="text/css" media="screen" href="Styles/style.css" />
+    <title></title>
+     <link rel="Stylesheet" type="text/css" media="screen" href="Styles/style.css" />
     <script type="text/javascript">
         function alteraMenu() {
             if (typeof linkMenu != 'undefined') {
+                if (linkMenu == "buscarAnuncio")
+                    document.getElementById("buscarAnuncio").className = "page_item current_page_item";
                 if (linkMenu == "sobre")
                     document.getElementById("sobre").className = "page_item current_page_item";
                 if (linkMenu == "contato")
@@ -27,8 +30,8 @@
             <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
             <AnonymousTemplate>
             Bem Vindo, visitante! [
-                <asp:HyperLink ID="HyperLink5" NavigateUrl="~/cadastro" runat="server">Cadastre-se</asp:HyperLink> |
-                <asp:HyperLink ID="HyperLink6"  NavigateUrl="~/login" runat="server">Login</asp:HyperLink> ]
+                <asp:HyperLink ID="HyperLink5" NavigateUrl="~/Cadastro.aspx" runat="server">Cadastre-se</asp:HyperLink> |
+                <asp:HyperLink ID="HyperLink6"  NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink> ]
             </AnonymousTemplate>
             <LoggedInTemplate>
             [
@@ -44,10 +47,11 @@
             <div class="header_menu">
                 <div class="header_menu_res">
                     <ul id="nav">
+                        
                         <li id="sobre">
-                            <asp:HyperLink ID="HyperLink2"  NavigateUrl="~/sobre" runat="server">Sobre</asp:HyperLink></li>
+                            <asp:HyperLink ID="HyperLink2"  NavigateUrl="~/Sobre.aspx" runat="server">Sobre</asp:HyperLink></li>
                         <li id="contato">
-                            <asp:HyperLink ID="HyperLink3"  NavigateUrl="~/contato" runat="server">Contato</asp:HyperLink></li>
+                            <asp:HyperLink ID="HyperLink3"  NavigateUrl="~/Contato.aspx" runat="server">Contato</asp:HyperLink></li>
                     </ul>
                     <div class="clr">
                     </div>
