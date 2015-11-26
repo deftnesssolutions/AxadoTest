@@ -23,7 +23,8 @@
                 se você ainda não possui uma conta.
             </p>
             <br />
-             <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false">
+             <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false"
+                OnLoggedIn="LoginUser_LoggedIn" OnAuthenticate="LoginUser_Authenticate">
                 <LayoutTemplate>
                     <span class="failureNotification">
                         <asp:Literal ID="FailureText" runat="server"></asp:Literal>

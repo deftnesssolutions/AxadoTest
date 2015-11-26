@@ -30,7 +30,7 @@ namespace AxadoWeb
             //{
             //    continueUrl = "~/";
             //}
-            Response.Redirect("~/Administrativa/Default.aspx");
+            Response.Redirect("~/Administrativa/Principal.aspx");
         }
     }
 }

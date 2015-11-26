@@ -35,7 +35,7 @@
             </AnonymousTemplate>
             <LoggedInTemplate>
             [
-                <asp:LinkButton ID="lnkAreaAdministrativa" PostBackUrl="~/Administrativa/Default.aspx" runat="server">Meus Anúncios</asp:LinkButton>
+                <asp:LinkButton ID="lnkAreaAdministrativa" PostBackUrl="~/Administrativa/Principal.aspx" runat="server">Meus Anúncios</asp:LinkButton>
                 ]
             </LoggedInTemplate>
             </asp:LoginView>
