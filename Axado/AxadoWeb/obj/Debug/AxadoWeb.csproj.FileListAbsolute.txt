@@ -3,3 +3,9 @@ F:\AxadoTest\Axado\AxadoWeb\bin\AxadoWeb.pdb
 F:\AxadoTest\Axado\AxadoWeb\obj\Debug\AxadoWeb.dll
 F:\AxadoTest\Axado\AxadoWeb\obj\Debug\AxadoWeb.pdb
 F:\AxadoTest\Axado\AxadoWeb\obj\Debug\AxadoWeb.csprojResolveAssemblyReference.cache
+F:\AxadoTest\Axado\AxadoWeb\bin\DAO.dll
+F:\AxadoTest\Axado\AxadoWeb\bin\DataAccess.dll
+F:\AxadoTest\Axado\AxadoWeb\bin\Entities.dll
+F:\AxadoTest\Axado\AxadoWeb\bin\DAO.pdb
+F:\AxadoTest\Axado\AxadoWeb\bin\DataAccess.pdb
+F:\AxadoTest\Axado\AxadoWeb\bin\Entities.pdb

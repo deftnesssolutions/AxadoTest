@@ -46,7 +46,7 @@
                 <tr>
                     <td colspan="2" align="center">
                         <asp:Button ID="btnAdicionar" CssClass="buttonCSS"  runat="server" 
-                            Text="Adicionar"  />
+                            Text="Adicionar" onclick="btnAdicionar_Click"  />
                     </td>
                 </tr>
                 <tr>

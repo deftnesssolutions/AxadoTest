@@ -54,7 +54,7 @@
                                 <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe" CssClass="inline">Mantenha-me logado</asp:Label>
                             </p>
                             <p align="center">
-                                <asp:HyperLink ID="HyperLink1" NavigateUrl="~/RecuperacaoSenha.aspx" runat="server">Esqueci minha senha</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" NavigateUrl="~/RecuperarSenha.aspx" runat="server">Esqueci minha senha</asp:HyperLink>
                             </p>
                         </fieldset>
                         <br />
