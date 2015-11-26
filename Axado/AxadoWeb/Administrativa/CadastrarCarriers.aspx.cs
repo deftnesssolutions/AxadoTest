@@ -98,5 +98,10 @@ namespace AxadoWeb.Administrativa
             }
         }
 
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Administrativa/ConsultarCarriers.aspx");
+        }
+
     }
 }

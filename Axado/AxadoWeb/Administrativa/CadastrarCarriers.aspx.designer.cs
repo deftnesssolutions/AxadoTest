@@ -193,6 +193,15 @@ namespace AxadoWeb.Administrativa {
         protected global::System.Web.UI.WebControls.Button btnAdicionar;
         
         /// <summary>
+        /// btnModificar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificar;
+        
+        /// <summary>
         /// lblMsg control.
         /// </summary>
         /// <remarks>

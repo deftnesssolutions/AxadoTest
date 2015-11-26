@@ -186,6 +186,8 @@
                     <td colspan="2" align="center">
                         <asp:Button ID="btnAdicionar" CssClass="buttonCSS"  runat="server" 
                             Text="Adicionar" ValidationGroup="Group1" onclick="btnAdicionar_Click"  />
+                        <asp:Button ID="btnModificar" CssClass="buttonCSS"  runat="server" 
+                            Text="Consultar/Editar Dados " onclick="btnModificar_Click" />
                     </td>
                 </tr>
                 <tr>

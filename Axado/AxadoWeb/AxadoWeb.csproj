@@ -60,6 +60,8 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Administrativa\CadastrarCarriers.aspx" />
     <Content Include="Administrativa\CadastrarClassificacaoCarrier.aspx" />
+    <Content Include="Administrativa\ConsultarCarriers.aspx" />
+    <Content Include="Administrativa\ConsultarClassificacao.aspx" />
     <Content Include="Administrativa\EditarCarriers.aspx" />
     <Content Include="Administrativa\EditarClassificacaoCarrier.aspx" />
     <Content Include="Administrativa\MeusDados.aspx" />
@@ -150,6 +152,20 @@
     </Compile>
     <Compile Include="Administrativa\CadastrarClassificacaoCarrier.aspx.designer.cs">
       <DependentUpon>CadastrarClassificacaoCarrier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativa\ConsultarCarriers.aspx.cs">
+      <DependentUpon>ConsultarCarriers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativa\ConsultarCarriers.aspx.designer.cs">
+      <DependentUpon>ConsultarCarriers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativa\ConsultarClassificacao.aspx.cs">
+      <DependentUpon>ConsultarClassificacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativa\ConsultarClassificacao.aspx.designer.cs">
+      <DependentUpon>ConsultarClassificacao.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrativa\EditarCarriers.aspx.cs">
       <DependentUpon>EditarCarriers.aspx</DependentUpon>
@@ -274,7 +290,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1311</DevelopmentServerPort>
+          <DevelopmentServerPort>3318</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
