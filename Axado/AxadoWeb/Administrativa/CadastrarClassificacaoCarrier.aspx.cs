@@ -19,11 +19,6 @@ namespace AxadoWeb.Administrativa
 
         protected void btnAdicionar_Click(object sender, EventArgs e)
         {
-            if(txtDescricao.Text=="")
-            {
-                lblMsg.Text = "Informe a Descrição!";
-                return;
-            }
             
             using (IConnection Conexion = new Connection())
             {

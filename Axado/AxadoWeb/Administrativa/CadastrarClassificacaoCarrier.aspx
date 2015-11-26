@@ -39,14 +39,16 @@
                         Descrição:
                     </td>
                     <td>
-                    <asp:TextBox ID="txtDescricao" TextMode="MultiLine" runat="server" Width="450px"></asp:TextBox>
+                        <asp:TextBox ID="txtDescricao" TextMode="MultiLine" runat="server" Width="450px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="valtxtDescricao" ControlToValidate="txtDescricao"
+                         runat="server" ErrorMessage="*Required" ForeColor="Red" ValidationGroup="Group1" />
                     </td>
                 </tr>
                 
                 <tr>
                     <td colspan="2" align="center">
                         <asp:Button ID="btnAdicionar" CssClass="buttonCSS"  runat="server" 
-                            Text="Adicionar" onclick="btnAdicionar_Click"  />
+                            Text="Adicionar" onclick="btnAdicionar_Click" ValidationGroup="Group1"  />
                     </td>
                 </tr>
                 <tr>
