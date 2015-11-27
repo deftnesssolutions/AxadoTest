@@ -11,8 +11,8 @@
         <table width="100%" style="background-color: #cfcfcf;" border="0">
             <tr height="80px">
                 <td width="450px" style="padding-left: 10px">
-                    <asp:TextBox ID="txtBusca" CssClass="unwatermarked" onkeyup="buscar()" runat="server"></asp:TextBox>
-                    <asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" WatermarkText="Digite o produto, marca ou modelo"
+                    <asp:TextBox ID="txtBusca" CssClass="unwatermarked"  runat="server"></asp:TextBox>
+                    <asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" WatermarkText="Digite o nome, cidade ou estado"
                         WatermarkCssClass="watermarked" TargetControlID="txtBusca" runat="server">
                     </asp:TextBoxWatermarkExtender>
                 </td>
@@ -42,7 +42,8 @@
                         </Fields>
                     </asp:DataPager>
                 </div>
-                <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" >
+                <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" 
+                    onitemdatabound="ListView1_ItemDataBound" DataKeyNames="id_carrier" >
                     <LayoutTemplate>
                 <table width="100%" id="tableListView" runat="server" style="padding: 0px; margin: 0px"
                     border="0" cellpadding="0" cellspacing="0">
@@ -89,10 +90,21 @@
                 </table>
             </LayoutTemplate>
                     <ItemTemplate>
+                  
                 <tr style="background-color: #ffffff; padding-top: 15px;">
-                    <td style="padding-left: 10px;">
-                        <asp:LinkButton ID="LinkButton1" PostBackUrl='<%# "~/Administrativa/EditarCarriers.aspx?ID=" + Eval("id_carrier") %>'
-                            CssClass="smallButtonCSS" runat="server">Editar</asp:LinkButton>
+                     <td style="padding-left: 30px;">
+                       <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButton1" PostBackUrl='<%# "~/Administrativa/EditarCarriers.aspx?ID=" + Eval("id_carrier") %>'
+                             runat="server">Editar</asp:LinkButton>    
+                            </td>
+                            <td>
+                                <asp:LinkButton ID="LinkButton3" 
+                             runat="server" CommandName="Delete">Eliminar</asp:LinkButton>   
+                            </td>
+                        </tr>
+                      </table>
                     </td>
                     <td style="padding-left: 10px;">
                         <b>
@@ -153,9 +165,20 @@
             </ItemTemplate>
             <AlternatingItemTemplate>
                 <tr style="background-color: #ededed; padding-top: 15px;">
-                   <td style="padding-left: 10px;">
-                        <asp:LinkButton ID="LinkButton1" PostBackUrl='<%# "~/Administrativa/EditarCarriers.aspx?ID=" + Eval("id_carrier") %>'
-                            CssClass="smallButtonCSS" runat="server">Editar</asp:LinkButton>
+                   <td style="padding-left: 30px;">
+                      <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButton1" PostBackUrl='<%# "~/Administrativa/EditarCarriers.aspx?ID=" + Eval("id_carrier") %>'
+                             runat="server">Editar</asp:LinkButton>    
+                            </td>
+                            <td>
+                                <asp:LinkButton ID="LinkButton3" 
+                             runat="server" CommandName="Delete">Eliminar</asp:LinkButton>   
+                            </td>
+                        </tr>
+                      </table>
+                      
                     </td>
                    <td style="padding-left: 10px;">
                         <b>
@@ -221,7 +244,7 @@
                 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:connectionString %>" 
-                    SelectCommand="BuscarCarrier" SelectCommandType="StoredProcedure">
+                    SelectCommand="BuscarCarrier" SelectCommandType="StoredProcedure" DeleteCommand="DELETE FROM carriers WHERE id_carrier=@id_carrier">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtBusca" Name="texto" PropertyName="Text" 
                             Type="String" DefaultValue="T" />

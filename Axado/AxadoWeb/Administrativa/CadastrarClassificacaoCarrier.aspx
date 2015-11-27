@@ -50,7 +50,7 @@
                         <asp:Button ID="btnAdicionar" CssClass="buttonCSS"  runat="server" 
                             Text="Adicionar" onclick="btnAdicionar_Click" ValidationGroup="Group1"  />
                         <asp:Button ID="btnModificar" CssClass="buttonCSS"  runat="server" 
-                            Text="Consultar/Editar Dados " />
+                            Text="Consultar/Editar Dados " onclick="btnModificar_Click" />
                     </td>
                 </tr>
                 <tr>

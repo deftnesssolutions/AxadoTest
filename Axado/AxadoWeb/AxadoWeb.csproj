@@ -72,7 +72,9 @@
     <Content Include="Gerenciamento\Default.aspx" />
     <Content Include="images\bannerbase.jpg" />
     <Content Include="images\bannerbase2.jpg" />
+    <Content Include="images\editar.bmp" />
     <Content Include="images\email_icon.png" />
+    <Content Include="images\excluir.bmp" />
     <Content Include="images\Facebook_icon.png" />
     <Content Include="images\go.png" />
     <Content Include="images\nu2go.bmp" />

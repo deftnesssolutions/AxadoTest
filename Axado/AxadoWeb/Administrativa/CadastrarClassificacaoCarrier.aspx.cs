@@ -34,5 +34,10 @@ namespace AxadoWeb.Administrativa
                 txtDescricao.Text = "";
             }
         }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Administrativa/ConsultarClassificacao.aspx");
+        }
     }
 }
