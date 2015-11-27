@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="axadotestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="axadotestModelStoreContainer">
+    <EntitySet Name="carriers" EntityType="axadotestModel.Store.carriers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="classificacao_carriers" EntityType="axadotestModel.Store.classificacao_carriers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_classificacao_carriers" Association="axadotestModel.Store.FK_classificacao_carriers">
+      <End Role="classificacao_carriers" EntitySet="classificacao_carriers" />
+      <End Role="carriers" EntitySet="carriers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="carriers">
+    <Key>
+      <PropertyRef Name="id_carrier" />
+    </Key>
+    <Property Name="id_carrier" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tipo" Type="varchar" MaxLength="1" />
+    <Property Name="nome" Type="varchar" MaxLength="100" />
+    <Property Name="endereco" Type="varchar" MaxLength="100" />
+    <Property Name="cidade" Type="varchar" MaxLength="100" />
+    <Property Name="estado" Type="varchar" MaxLength="2" />
+    <Property Name="cpf" Type="varchar" MaxLength="14" />
+    <Property Name="cnpj" Type="varchar" MaxLength="18" />
+    <Property Name="inscr_estadual" Type="varchar" MaxLength="14" />
+    <Property Name="nro_placa" Type="varchar" MaxLength="20" />
+    <Property Name="estado_placa" Type="varchar" MaxLength="2" />
+    <Property Name="id_classificacao" Type="int" />
+  </EntityType>
+  <EntityType Name="classificacao_carriers">
+    <Key>
+      <PropertyRef Name="id_classificacao" />
+    </Key>
+    <Property Name="id_classificacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tipo" Type="varchar" MaxLength="1" />
+    <Property Name="descricao" Type="text" />
+  </EntityType>
+  <Association Name="FK_classificacao_carriers">
+    <End Role="classificacao_carriers" Type="axadotestModel.Store.classificacao_carriers" Multiplicity="0..1" />
+    <End Role="carriers" Type="axadotestModel.Store.carriers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classificacao_carriers">
+        <PropertyRef Name="id_classificacao" />
+      </Principal>
+      <Dependent Role="carriers">
+        <PropertyRef Name="id_classificacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

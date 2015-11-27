@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="axadotestModelStoreContainer" CdmEntityContainer="axadotestEntities">
+    <EntitySetMapping Name="carriers">
+      <EntityTypeMapping TypeName="axadotestModel.carrier">
+        <MappingFragment StoreEntitySet="carriers">
+          <ScalarProperty Name="id_carrier" ColumnName="id_carrier" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="cnpj" ColumnName="cnpj" />
+          <ScalarProperty Name="inscr_estadual" ColumnName="inscr_estadual" />
+          <ScalarProperty Name="nro_placa" ColumnName="nro_placa" />
+          <ScalarProperty Name="estado_placa" ColumnName="estado_placa" />
+          <ScalarProperty Name="id_classificacao" ColumnName="id_classificacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classificacao_carriers">
+      <EntityTypeMapping TypeName="axadotestModel.classificacao_carriers">
+        <MappingFragment StoreEntitySet="classificacao_carriers">
+          <ScalarProperty Name="id_classificacao" ColumnName="id_classificacao" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

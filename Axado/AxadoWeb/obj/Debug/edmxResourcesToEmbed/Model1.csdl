@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="axadotestModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="axadotestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="carriers" EntityType="axadotestModel.carrier" />
+    <EntitySet Name="classificacao_carriers" EntityType="axadotestModel.classificacao_carriers" />
+    <AssociationSet Name="FK_classificacao_carriers" Association="axadotestModel.FK_classificacao_carriers">
+      <End Role="classificacao_carriers" EntitySet="classificacao_carriers" />
+      <End Role="carriers" EntitySet="carriers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="carrier">
+    <Key>
+      <PropertyRef Name="id_carrier" />
+    </Key>
+    <Property Name="id_carrier" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipo" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="nome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="endereco" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="cidade" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="estado" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="cpf" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="cnpj" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+    <Property Name="inscr_estadual" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="nro_placa" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="estado_placa" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="id_classificacao" Type="Int32" />
+    <NavigationProperty Name="classificacao_carriers" Relationship="axadotestModel.FK_classificacao_carriers" FromRole="carriers" ToRole="classificacao_carriers" />
+  </EntityType>
+  <EntityType Name="classificacao_carriers">
+    <Key>
+      <PropertyRef Name="id_classificacao" />
+    </Key>
+    <Property Name="id_classificacao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipo" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="descricao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="carriers" Relationship="axadotestModel.FK_classificacao_carriers" FromRole="classificacao_carriers" ToRole="carriers" />
+  </EntityType>
+  <Association Name="FK_classificacao_carriers">
+    <End Role="classificacao_carriers" Type="axadotestModel.classificacao_carriers" Multiplicity="0..1" />
+    <End Role="carriers" Type="axadotestModel.carrier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classificacao_carriers">
+        <PropertyRef Name="id_classificacao" />
+      </Principal>
+      <Dependent Role="carriers">
+        <PropertyRef Name="id_classificacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
